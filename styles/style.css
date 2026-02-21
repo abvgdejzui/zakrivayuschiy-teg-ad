@@ -11,13 +11,13 @@
 */
 
 .page {
-  min-inline-size: 320px;
-  min-block-size: 100dvb;
   font-family: var(--font-text, 'Inter'), sans-serif;
   font-weight: var(--text-weight, 400);
   font-size: 18px;
   background-image: var(--bg);
   background-attachment: fixed;
+  min-inline-size: 320px;
+  min-block-size: 100dvb;
 }
 
 .header {
@@ -26,18 +26,18 @@
 }
 
 .header__card {
-  inline-size: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
-  max-inline-size: 700px;
-  height: 7em;
-  background-color: white;
-  margin: 0 auto;
-  border: 2px solid #000;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   gap: 20px;
+  height: 7em;
+  margin: 0 auto;
   margin: 100px auto 80px;
+  border: 2px solid #000;
+  background-color: white;
+  inline-size: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
+  max-inline-size: 700px;
 }
 
 .header__title {
@@ -52,9 +52,9 @@
 .card {
   margin: 20px auto 0;
   border: 2px solid #000;
+  background-color: #fff;
   inline-size: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
   max-inline-size: 700px;
-  background-color: #fff;
 }
 
 .card__title {
@@ -67,25 +67,25 @@
   position: relative;
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
-  aspect-ratio: 1 / 1;
   overflow: hidden;
+  aspect-ratio: 1 / 1;
 }
 
 .card__image img {
   width: 100%;
   height: 100%;
-  object-fit: cover ;
+  object-fit: cover;
 }
 
 .card__image-label {
-  opacity: 0.5;
   position: absolute;
-  mix-blend-mode: hard-light;
-  font-size: 14px;
   top: 25px;
   right: 13px;
+  opacity: 0.5;
   font-family: var(--font-accent);
+  font-size: 14px;
   text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;
+  mix-blend-mode: hard-light;
 }
 
 .filter1 {
@@ -99,26 +99,31 @@
 .filter3 {
   filter: hue-rotate(-90deg) invert(20%);
 }
+
 .filter4 {
   filter: hue-rotate(-180deg) saturate(200%);
 }
+
 .filter5 {
   filter: sepia(1) brightness(0.8);
 }
+
 .filter6 {
   filter: grayscale(1) invert(1);
 }
+
 .filter7 {
   filter: blur(7px);
 }
+
 .filter8 {
   filter: invert(1) hue-rotate(90deg) contrast(2) brightness(200%);
 }
 
 .card__text {
-  margin: 25px;
   display: grid;
   gap: 27px;
+  margin: 25px;
 }
 
 .button__text {
@@ -128,22 +133,22 @@
 }
 
 .card__controls {
-  margin: 0 25px 25px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   gap: 12px;
+  margin: 0 25px 25px;
 }
 
 .card__icon-button {
-  background-color: transparent;
-  padding: 0;
   height: 39px;
   border: none;
-  outline: none;
-  cursor: pointer;
-  transition: border 0.3s ease;
   border: 2px solid transparent;
+  padding: 0;
+  outline: none;
+  background-color: transparent;
+  transition: border 0.3s ease;
+  cursor: pointer;
 }
 
 .card__icon-button:focus {
@@ -161,28 +166,28 @@
 
 .card__icon-button .main-body {
   fill: transparent;
-  transition: fill 0.3s ease; 
+  transition: fill 0.3s ease;
 }
 
 .card__icon-button:hover .core {
   fill: var(--contour-color);
-  transition: fill 0.3s ease; 
+  transition: fill 0.3s ease;
 }
 
 .card__icon-button:hover .main-body {
   fill: var(--contour-color);
-  transition: fill 0.3s ease 0.05s; 
+  transition: fill 0.3s ease 0.05s;
 }
 
 
 .card__icon-button:active .core {
   fill: var(--animation-fill-color);
-  transition: fill 0.3s ease; 
+  transition: fill 0.3s ease;
 }
 
 .card__icon-button:active .main-body {
   fill: var(--animation-fill-color);
-  transition: fill 0.3s ease 0.05s; 
+  transition: fill 0.3s ease 0.05s;
 }
 
 .like-icon.is-liked .core {
@@ -191,12 +196,12 @@
 
 .like-icon.is-liked .main-body {
   fill: var(--animation-fill-color);
-  transition: fill 0.3s ease 0.05s; 
+  transition: fill 0.3s ease 0.05s;
 }
 
 .like-icon.is-liked .contour {
   fill: var(--animation-fill-color);
-  transition: fill 0.3s ease 0.3s; 
+  transition: fill 0.3s ease 0.3s;
 }
 
 .like-icon.is-liked .heart {
@@ -220,28 +225,28 @@
 }
 
 .card__like-button {
-  padding: 8px 0;
   width: 118px;
   margin: 0;
+  padding: 8px 0;
 }
 
 .save-button {
-  width: clamp(19.125rem, 18.4868rem + 2.723vw, 20.9375rem);
-  margin: 54px auto 102px;
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
   justify-content: center;
   align-items: center;
+  gap: 8px;
+  width: clamp(19.125rem, 18.4868rem + 2.723vw, 20.9375rem);
+  margin: 54px auto 102px;
   padding: 15px 10px;
-  
+
 }
 
 dialog {
-  background-color: #fff;
+  width: clamp(21.3125rem, 21.0484rem + 1.1268vw, 22.0625rem);
   border: 2px solid #000;
   padding: 30px;
-  width: clamp(21.3125rem, 21.0484rem + 1.1268vw, 22.0625rem);
+  background-color: #fff;
 }
 
 dialog::backdrop {
@@ -255,74 +260,74 @@ dialog svg {
 
 .dialog__content {
   display: flex;
-  gap: 20px;
   justify-content: center;
   align-items: center;
+  gap: 20px;
 
 }
 
 .dialog__text {
   font-family: var(--font-accent);
-  text-transform: uppercase;
   font-size: 14px;
   line-height: 1.5;
+  text-transform: uppercase;
 }
 
 .dialog__btn {
-  text-transform: uppercase;
   width: 100%;
-  padding: 13px;
   margin-top: 30px;
+  padding: 13px;
+  text-transform: uppercase;
 }
 
 .button {
-  cursor: pointer;
+  position: relative;
+  border: 2px solid #000;
+  overflow: hidden;
   font-family: var(--font-accent);
   font-size: 14px;
-  border: 2px solid #000;
   background-color: #fff;
   transition: box-shadow 0.3s ease;
-  position: relative;
-  overflow: hidden;
+  cursor: pointer;
 }
 
 .button:focus {
-  outline: none;
   box-shadow: 2px 2px 0 #000;
+  outline: none;
 }
 
 .button::after {
   content: ' ';
   position: absolute;
   inset: 0 0;
-  background-color: #000;
-  width: 100%;
   z-index: 0;
-  transform: translateX(-101%) ;
+  width: 100%;
+  background-color: #000;
   transition: transform 0.5s ease-in-out;
+  transform: translateX(-101%);
 }
 
 .button:hover::after {
-  transform: translateX(0) ;
+  transform: translateX(0);
 }
 
 .button span {
-  z-index: 1;
   position: relative;
-  mix-blend-mode: difference;
+  z-index: 1;
   color: #fff;
+  mix-blend-mode: difference;
 }
 
 .floppy {
-  z-index: 2;
   position: relative;
-  mix-blend-mode: difference;
+  z-index: 2;
   filter: invert(1);
+  mix-blend-mode: difference;
 }
 
 @supports (-webkit-text-stroke: 1px #fff) {
   .card__image-label {
-    -webkit-text-stroke: 1px #fff;
     text-shadow: none;
+    -webkit-text-stroke: 1px #fff;
   }
 }
